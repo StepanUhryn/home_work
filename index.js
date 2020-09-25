@@ -1,3 +1,3 @@
 let a = 1;
 const b = '2'
-const c = '99'
+const c = '9'

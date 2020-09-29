@@ -81,6 +81,6 @@ let myObject = {
     age: 32,
     place_of_living : 'Uzhorod',
     gender : 'male',
-    myHobbyArray, 
+    myHobbyArray 
     };
 

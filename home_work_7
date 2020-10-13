@@ -1,0 +1,76 @@
+// 1. Створіть функцію за допомогою "function expression".
+
+let dd = function(a,b) {
+    console.log('a + b = ', a + b);
+};
+
+dd (2,33); // виклик функції dd з аргументами a i b.
+
+a + b =  35
+
+// 2. Створіть функцію за допомогою "new Function".
+
+let sum = new Function('a', 'b', 'return a + b');
+alert( sum(1, 2) ); // 3
+
+// 3. Створіть функцію за допомогою "arrow function".
+
+let cc = (a, b, c, d) => a * b + c * d;
+console.log(cc(1, 2, 3, 4)); // 14
+
+// 4. Створіть функцію яка приймає два аргументи, перший це обєкт другий це колбек.
+
+let zvarutuBograch = function(a, cb) {
+    console.log(`Ingradientu dlja varinnja ${a.s} hotovi. Pochunaemo varutu.`);
+setTimeout(cb, 2000);
+};
+let tt = {s: 'bograch', s1: 'levesch'};
+let jurnal = function() {
+    console.log('Lustaemo jurnal, poku hotuesja bograch.');
+};
+
+let bograchZvaruvsja = function() {
+    console.log('Bograch hotovuj, jimo. Ura!!!');
+};
+
+zvarutuBograch(tt, bograchZvaruvsja);
+jurnal();
+
+Ingradientu dlja varinnja bograch hotovi. Pochunaemo varutu.
+Lustaemo jurnal, poku hotuesja bograch.
+undefined
+Bograch hotovuj, jimo. Ura!!!
+
+// 5. Створіть рекурсивну функцію.
+
+function getFactorial(n) {
+    if (n === 1) {
+      return 1;
+            
+    } else {
+        return n * getFactorial(n-1);
+           }
+};
+
+let result = getFactorial(6);
+console.log(result); // 720
+
+// 6. Створіть самовикликаючусь функцію.
+
+(function (x, y, z) {
+    console.log(x);
+    console.log(y);
+    console.log(z);
+}(1,2,3));
+
+1
+2
+3
+
+// 7. Створіть функцію і виведіть в консоль всі аргументи які були їй передані.
+
+function nameFunction(arg1, arg2, arg3) {
+    console.log(nameFunction.arguments)
+};
+
+nameFunction(1,{2: 's', w: 'h'},[3, 'gg', true]);

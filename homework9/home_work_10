@@ -1,0 +1,60 @@
+//1 Створіть об'єкт Person який буде містити імя, прізвище і метод для виводу повного імені і просто імені за 
+// допомогою трьох різних варіантів:
+
+//2 Просто функції
+
+let Person = {
+    firstName: 'Andrii',
+    lastName: 'Uhryn',
+    getName: () =>`${Person.firstName} ${Person.lastName}`
+};
+ console.log(Person.getName()); 
+ console.log(Person.firstName);
+
+Andrii Uhryn
+Andrii 
+
+//3 Функції конструктору
+
+
+function Person(firstName, lastName, age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+
+    this.getMethod = function() {
+        return (this.firstName + ' ' + this.lastName + ' ' + this.age);   
+    } 
+}
+let ivanov = new Person('Ivan', 'Ivanov', 44);
+let petrov = new Person('Petro', 'Petrov', 33);
+
+console.log(ivanov.getMethod());
+console.log(petrov.getMethod());
+console.log(ivanov.firstName);
+console.log(petrov.firstName);
+
+Ivan Ivanov 44
+Petro Petrov 33
+Ivan
+Petro
+
+//4 Класу
+
+class Person {
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName; 
+    }
+    
+    vuvidNaEkran() {console.log(`${this.firstName} ${this.lastName}`)};
+    vuvidNaEkranImja() {console.log(`${this.firstName}`)};
+}
+
+let person = new Person('Jon', 'Rambo');
+
+person.vuvidNaEkranImja();
+person.vuvidNaEkran();
+
+Jon
+Jon Rambo

@@ -1,0 +1,99 @@
+
+
+//файл стилів занулння
+@import "nullstyle.scss";
+
+.wrapper{
+  min-height: 100%;
+  display: grid;
+  grid-template: minmax(100px, auto) 1fr minmax(70px, auto) / 1fr;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+.header{
+  grid-area: header;
+  padding: 15px;
+  background-color: #794f45;
+  display: grid;
+  grid-template: 1fr/1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr;
+  align-items: center;
+}
+.header__logo{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #fff;
+  grid-column: 2/3;
+}
+.header__menu{
+  grid-column: 3/4;
+}
+.header__list{
+  display: grid;
+  grid-auto-flow: column;
+  justify-items: end;
+
+}
+.header__list li{
+
+}
+.header__link{
+  color: white;
+  font-size: 18px;
+  text-decoration: underline;
+}
+.header__burger{}
+
+.main{
+  grid-area: main;
+  padding: 30px 15px;
+  display: grid;
+  grid-template: 1fr/1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr;
+
+}
+.sidebar{
+  grid-column: 2/3;
+  background-color: #7a956b;
+  padding: 30px 15px;
+}
+.sidebar__menu{}
+.sidebar__list{}
+.sidebar__list li{
+  margin: 0 0 15px 0;
+  text-decoration: underline;
+}
+.sidebar__link{
+  color: white;
+  font-size: 20px;
+}
+.content {
+  grid-column: 3/4;
+  padding-left: 30px;
+}
+.content__title{
+  margin-bottom: 20px;
+}
+.galery{}
+.content__galery{}
+.galery__title{
+  margin-bottom: 10px;
+}
+.products{}
+.content__products{}
+.product__title{
+
+}
+.products__items{}
+.product__item{}
+.product__image{}
+.product__name{}
+.products__button{}
+
+.footer{
+  background-color: #77608d;
+}
+.footer__copy{}
+.footer__text{}
